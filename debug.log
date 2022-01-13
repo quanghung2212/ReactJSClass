@@ -1,2 +1,49 @@
 [0112/185246.156:ERROR:registration_protocol_win.cc(102)] CreateFile: The system cannot find the file specified. (0x2)
 [0112/185321.873:ERROR:registration_protocol_win.cc(102)] CreateFile: The system cannot find the file specified. (0x2)
+Các bước sử dụng git
+- Tạo tài khoản github
+- Tạo repo (nơi lưu trữ source code)
+
+3 khu vực lưu trữ source code : local 
+
+- Working space
+- Staging: git add: bê source vào Staging
+- Local: git commit : add to local
+=> Đẩy source code lên remote (nơi lưu trữ source code nhưng online)
+- lệnh git remote chỉ phải làm 1 lần đầu tiên khi khởi tạo project 
+
+
+- git init 
+- git add . ( đẩy source code từ working lên stagging)
+- git commit ( từ stagging -> local )
+- git remote (liên kết source local với source online )
+- git push ( đẩy source code lên)
+
+=> Sau khi push lần đầu tiên 
+
+- git add . ( đẩy source code từ working lên stagging)
+- git commit ( từ stagging -> local )
+- git push ( đẩy source code lên)
+
+git status: kiểm tra trạng thái 
+git log: kiếm tra log
+
+ông A update source code 
+đi vào thư mục cd {Tên thư mục}
+đi ra ngoài thư mục cd ..
+- git clone : lấy source về: Chú ý chỉ sử d khi máy client chưa có project !abc
+- git pull: update source khi remote có thay đổi. => Tôi là ông A và tôi update tiếp dòng này 
+
+ô B đang làm 
+
+- nhiều người cùng sửa 1 file (trên cùng dòng) sẽ bị confict 
+- xử lý conflict bằng cách pull code của remote về 
+- chọn đoạn code muốn
+- add, comit , push lại 
+
+git branch {tên nhánh}: tạo nhánh mới
+git branch: list nhánh đang có
+git checkout {tên nhánh}: chuyển nhánh
+
+Sau khi phát triển xong tính năng thì push nhánh lên như bình thường với lênh git push --set-upstream origin {ten nhanh}
+gửi pull request vào nhánh mong muốn
